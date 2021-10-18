@@ -64,6 +64,7 @@ const ColorPicker = ({
   hslGradient,
   hideTextfield,
   disablePlainColor,
+  buttonSize
 }) => {
   const classes = useStyles();
   const refPicker = useRef(null);
@@ -151,6 +152,7 @@ const ColorPicker = ({
       <div ref={refPicker} className={classes.root}>
         <ColorButton
           data-testid="colorpicker-button"
+          size={buttonSize}
           className={`muicc-colorpicker-button ${classes.colorpickerButton}`}
           color={color}
           onClick={handleClick}
